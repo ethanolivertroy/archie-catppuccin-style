@@ -1,0 +1,19 @@
+# Hugo build artifacts
+/exampleSite/public/
+/exampleSite/resources/
+/exampleSite/.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.log
+node_modules/
