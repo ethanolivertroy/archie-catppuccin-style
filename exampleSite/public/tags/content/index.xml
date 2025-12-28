@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Content on Archie Catppuccin Demo</title>
+    <link>http://localhost:1313/tags/content/</link>
+    <description>Recent content in Content on Archie Catppuccin Demo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Ethan Oliver Troy</copyright>
+    <lastBuildDate>Mon, 08 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 Tips for Writing Technical Blog Posts That People Actually Read</title>
+      <link>http://localhost:1313/posts/writing-1-blogging-tips/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/writing-1-blogging-tips/</guid>
+      <description>&lt;p&gt;Technical writing doesn&amp;rsquo;t have to be dry and boring. Here&amp;rsquo;s how to create blog posts that educate and engage your audience.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-start-with-a-hook&#34;&gt;1. Start with a Hook&lt;/h2&gt;&#xA;&lt;p&gt;Your opening paragraph should answer: &amp;ldquo;Why should I care?&amp;rdquo;&lt;/p&gt;&#xA;&lt;div class=&#39;callout callout-tip&#39;&gt;&#xA;  &lt;div class=&#34;callout-inner&#34;&gt;&#xA;    💡 Tip: Lead with a problem your reader faces, then promise a solution.&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;p&gt;&lt;strong&gt;Bad opening&lt;/strong&gt;: &amp;ldquo;In this post, I will explain how to use React hooks.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Good opening&lt;/strong&gt;: &amp;ldquo;Tired of wrestling with class components and &lt;code&gt;this&lt;/code&gt; binding? React hooks make state management cleaner and your code easier to understand.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

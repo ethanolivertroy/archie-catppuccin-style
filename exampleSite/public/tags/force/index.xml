@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Force on Archie Catppuccin Demo</title>
+    <link>http://localhost:1313/tags/force/</link>
+    <description>Recent content in Force on Archie Catppuccin Demo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Ethan Oliver Troy</copyright>
+    <lastBuildDate>Tue, 25 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/force/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Philosophy of the Force: Light, Dark, and Balance</title>
+      <link>http://localhost:1313/posts/sw-1-force-philosophy/</link>
+      <pubDate>Tue, 25 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/sw-1-force-philosophy/</guid>
+      <description>&lt;p&gt;The Force is more than space magic - it&amp;rsquo;s a philosophical framework exploring morality, emotion, and balance. Let&amp;rsquo;s break down what it all means.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-jedi-code-vs-sith-code&#34;&gt;The Jedi Code vs. Sith Code&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-jedi-code&#34;&gt;The Jedi Code&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no emotion, there is peace.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no ignorance, there is knowledge.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no passion, there is serenity.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no chaos, there is harmony.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;There is no death, there is the Force.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Philosophy&lt;/strong&gt;: Stoicism meets Eastern philosophy&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,15 +1,31 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "Archie"
+name = "Archie Catppuccin"
 license = "MIT"
-licenselink = "https://github.com/athul/archie/blob/master/LICENSE"
-description = "Archie is a minimal and clean theme for hugo with a markdown-ish UI."
-homepage = "https://github.com/athul/archie"
-tags = ["blog","simple","responsive","minimal","tags","personal","clean","shortcodes"]
-features = ["blog", "Clean and minimal", "Responsive", "Syntax highlighting",]
+licenselink = "https://github.com/ethanolivertroy/archie-catppuccin/blob/master/LICENSE"
+description = "Archie theme with Catppuccin color palette - 4 beautiful flavors (Latte, Frappé, Macchiato, Mocha)"
+homepage = "https://github.com/ethanolivertroy/archie-catppuccin"
+tags = ["blog", "catppuccin", "minimal", "responsive", "clean", "dark", "light", "personal", "simple", "tags", "shortcodes"]
+features = [
+  "4 Catppuccin color flavors (Latte, Frappé, Macchiato, Mocha)",
+  "Responsive design",
+  "Flavor selector with localStorage persistence",
+  "Syntax highlighting",
+  "Table of contents",
+  "Math support (MathJax/KaTeX)",
+  "Callouts (5 types)",
+  "Tags and categories",
+  "Google Analytics",
+  "Disqus comments"
+]
 min_version = "0.41"
 
 [author]
+  name = "Ethan Oliver Troy"
+  homepage = "https://github.com/ethanolivertroy"
+
+[original]
   name = "Athul Cyriac Ajay"
-  homepage = "https://github.com/athul"
+  homepage = "https://github.com/athul/archie"
+  repo = "https://github.com/athul/archie"

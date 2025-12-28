@@ -1,28 +1,16 @@
 +++
 title = "About"
-description = "Hugo, the world’s fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us","about-hugo","contact"]
-author = "Hugo Authors"
+description = "About this demo site"
+date = "2025-12-27"
+author = "Ethan Oliver Troy"
 +++
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+This is a demonstration site for the **Archie Catppuccin** Hugo theme - a beautiful fork of the Archie theme featuring the soothing Catppuccin color palette.
 
-Hugo makes use of a variety of open source projects including:
+The theme includes four gorgeous flavors: Latte, Frappé, Macchiato, and Mocha. Use the dropdown selector in the navigation to try them all!
 
-* https://github.com/yuin/goldmark
-* https://github.com/alecthomas/chroma
-* https://github.com/muesli/smartcrop
-* https://github.com/spf13/cobra
-* https://github.com/spf13/viper
+## About the Theme
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
+Archie Catppuccin combines the minimal, markdown-focused design of Archie with Catppuccin's carefully crafted color schemes. Perfect for blogs, portfolios, and documentation sites.
 
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremelly fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
-
-
-
+**Repository**: [github.com/ethanolivertroy/archie-catppuccin](https://github.com/ethanolivertroy/archie-catppuccin)

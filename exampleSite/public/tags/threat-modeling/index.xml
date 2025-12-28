@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Threat-Modeling on Archie Catppuccin Demo</title>
+    <link>http://localhost:1313/tags/threat-modeling/</link>
+    <description>Recent content in Threat-Modeling on Archie Catppuccin Demo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Ethan Oliver Troy</copyright>
+    <lastBuildDate>Mon, 15 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/threat-modeling/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Introduction to Threat Modeling for Web Applications</title>
+      <link>http://localhost:1313/posts/cybersec-1-threat-modeling/</link>
+      <pubDate>Mon, 15 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/cybersec-1-threat-modeling/</guid>
+      <description>&lt;p&gt;Threat modeling is a structured approach to identifying security threats before they become vulnerabilities. In this post, we&amp;rsquo;ll explore the STRIDE methodology and how to apply it to modern web applications.&lt;/p&gt;&#xA;&lt;h2 id=&#34;what-is-stride&#34;&gt;What is STRIDE?&lt;/h2&gt;&#xA;&lt;p&gt;STRIDE is an acronym representing six threat categories:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;S&lt;/strong&gt;poofing - Impersonating someone or something else&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;T&lt;/strong&gt;ampering - Modifying data or code&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;R&lt;/strong&gt;epudiation - Denying actions or transactions&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;I&lt;/strong&gt;nformation Disclosure - Exposing protected information&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;D&lt;/strong&gt;enial of Service - Degrading or denying service&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;E&lt;/strong&gt;levation of Privilege - Gaining unauthorized access&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;applying-stride-to-web-apps&#34;&gt;Applying STRIDE to Web Apps&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-spoofing-threats&#34;&gt;1. Spoofing Threats&lt;/h3&gt;&#xA;&lt;p&gt;Authentication is your first line of defense. Consider:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

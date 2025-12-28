@@ -1,0 +1,50 @@
+/* Catppuccin Frappé - Dark Theme
+ * https://catppuccin.com/palette
+ */
+
+:root {
+  /* Base Colors */
+  --ctp-base: #303446;
+  --ctp-mantle: #292c3c;
+  --ctp-crust: #232634;
+
+  /* Text Colors */
+  --ctp-text: #c6d0f5;
+  --ctp-subtext1: #b5bfe2;
+  --ctp-subtext0: #a5adce;
+
+  /* Surface Colors */
+  --ctp-surface0: #414559;
+  --ctp-surface1: #51576d;
+  --ctp-surface2: #626880;
+
+  /* Accent Colors */
+  --ctp-rosewater: #f2d5cf;
+  --ctp-flamingo: #eebebe;
+  --ctp-pink: #f4b8e4;
+  --ctp-mauve: #ca9ee6;
+  --ctp-red: #e78284;
+  --ctp-maroon: #ea999c;
+  --ctp-peach: #ef9f76;
+  --ctp-yellow: #e5c890;
+  --ctp-green: #a6d189;
+  --ctp-teal: #81c8be;
+  --ctp-sky: #99d1db;
+  --ctp-sapphire: #85c1dc;
+  --ctp-blue: #8caaee;
+  --ctp-lavender: #babbf1;
+
+  /* Theme Variable Mappings */
+  --color-primary: var(--ctp-mauve);
+  --color-primary-hover: var(--ctp-pink);
+  --color-border: var(--ctp-lavender);
+  --color-callout: var(--ctp-blue);
+  --color-text: var(--ctp-text);
+  --color-text-muted: var(--ctp-subtext1);
+  --color-text-meta: var(--ctp-subtext0);
+  --color-background: var(--ctp-base);
+  --color-background-code: var(--ctp-surface0);
+  --color-background-pre: var(--ctp-mantle);
+  --color-background-toc: var(--ctp-surface0);
+  --color-background-draft: var(--ctp-surface1);
+}

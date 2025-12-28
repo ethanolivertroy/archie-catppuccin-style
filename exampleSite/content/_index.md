@@ -1,4 +1,3 @@
 +++
-author = "Hugo Authors"
+author = "Ethan Oliver Troy"
 +++
-

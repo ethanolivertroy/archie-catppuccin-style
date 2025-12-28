@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>REST API Security Best Practices for 2025 - Archie Catppuccin Demo</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Essential security measures for modern API development" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/posts/cybersec-2-api-security/">
+  <meta property="og:site_name" content="Archie Catppuccin Demo">
+  <meta property="og:title" content="REST API Security Best Practices for 2025">
+  <meta property="og:description" content="Essential security measures for modern API development">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-10T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-10T00:00:00+00:00">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="API">
+    <meta property="article:tag" content="REST">
+    <meta property="article:tag" content="Security">
+    <meta property="article:tag" content="Oauth">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="REST API Security Best Practices for 2025">
+  <meta name="twitter:description" content="Essential security measures for modern API development">
+
+        <link href="http://localhost:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.654c7695f4b9fa25aa6dc6f2f6425526c6f24cdd1492c2d0eb763d229d97e383.css" />
+
+	<link id="flavor-latte" rel="stylesheet" type="text/css" href="http://localhost:1313/css/latte.d77227573f872ed07da0154ff547fbfb9ab0a77368c1dd8d54e90e059fac2c1c.css" disabled />
+	<link id="flavor-frappe" rel="stylesheet" type="text/css" href="http://localhost:1313/css/frappe.8afb622563a8caed70b03ba53562c3dde534a5fca7c772cb959dd48875af147d.css" disabled />
+	<link id="flavor-macchiato" rel="stylesheet" type="text/css" href="http://localhost:1313/css/macchiato.25f46184fcebe0009a303aafefa91d967f13bb95e5e8445e13c41c082934a386.css" disabled />
+	<link id="flavor-mocha" rel="stylesheet" type="text/css" href="http://localhost:1313/css/mocha.c846e1bc657decab6442dadd37a0c96ff85eb1249980b951d41f6d4a9ef513cd.css" disabled />
+
+	
+	<script>
+		window.CATPPUCCIN_DEFAULT_FLAVOR = "mocha";
+	</script>
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/">Archie Catppuccin Demo</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<div class="flavor-selector-wrapper">
+			<label for="flavor-selector" class="visually-hidden">Choose Catppuccin flavor</label>
+			<select id="flavor-selector" class="flavor-selector" onchange="handleFlavorChange(event)" aria-label="Select Catppuccin theme flavor">
+				<option value="latte">☕ Latte</option>
+				<option value="frappe">🥤 Frappé</option>
+				<option value="macchiato">🧋 Macchiato</option>
+				<option value="mocha">🍵 Mocha</option>
+			</select>
+		</div>
+		<script src="http://localhost:1313/js/catppuccin-flavor.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">REST API Security Best Practices for 2025</h1>
+          <div class="meta">Posted on Dec 10, 2025</div>
+        </div>
+        
+        <section class="body">
+          <p>APIs are the backbone of modern applications, but they&rsquo;re also a prime target for attackers. Let&rsquo;s explore essential security practices every API developer should implement.</p>
+<h2 id="authentication--authorization">Authentication &amp; Authorization</h2>
+<h3 id="oauth-20-and-jwt">OAuth 2.0 and JWT</h3>
+<p>Use OAuth 2.0 for delegated authorization and JWTs for stateless authentication.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example: Verifying a JWT token
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">jwt</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;jsonwebtoken&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">verifyToken</span>(<span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">token</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">headers</span>[<span style="color:#e6db74">&#39;authorization&#39;</span>]<span style="color:#f92672">?</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39; &#39;</span>)[<span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">token</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">401</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;No token provided&#39;</span> });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">decoded</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">jwt</span>.<span style="color:#a6e22e">verify</span>(<span style="color:#a6e22e">token</span>, <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">JWT_SECRET</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">req</span>.<span style="color:#a6e22e">user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">decoded</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">next</span>();
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">403</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Invalid token&#39;</span> });
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
+
+<div class='callout'>
+  <div class="callout-inner">
+    <p><strong>JWT Best Practices</strong>:</p>
+<ul>
+<li>Use strong signing algorithms (RS256 or ES256)</li>
+<li>Set appropriate expiration times</li>
+<li>Include minimal claims (don&rsquo;t store sensitive data)</li>
+<li>Implement token refresh mechanisms</li>
+</ul>
+  </div>
+</div>
+
+
+<h2 id="rate-limiting">Rate Limiting</h2>
+<p>Protect your API from abuse and DDoS attacks.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">rateLimit</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;express-rate-limit&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">apiLimiter</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">rateLimit</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">windowMs</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">15</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">60</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1000</span>, <span style="color:#75715e">// 15 minutes
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">max</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">100</span>, <span style="color:#75715e">// Limit each IP to 100 requests per windowMs
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Too many requests, please try again later.&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">standardHeaders</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">legacyHeaders</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span>,
+</span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#e6db74">&#39;/api/&#39;</span>, <span style="color:#a6e22e">apiLimiter</span>);
+</span></span></code></pre></div><h2 id="input-validation">Input Validation</h2>
+<p>Never trust user input - validate everything!</p>
+<div class='callout callout-alert'>
+  <div class="callout-inner">
+    🚨 SQL Injection is still the #1 web vulnerability. Always use parameterized queries!
+  </div>
+</div>
+
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Bad - Vulnerable to SQL injection</span>
+</span></span><span style="display:flex;"><span>query <span style="color:#f92672">=</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = &#39;</span><span style="color:#e6db74">{</span>username<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Good - Using parameterized queries</span>
+</span></span><span style="display:flex;"><span>cursor<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#34;SELECT * FROM users WHERE username = ?&#34;</span>, (username,))
+</span></span></code></pre></div><h2 id="cors-configuration">CORS Configuration</h2>
+<p>Configure CORS properly to prevent unauthorized cross-origin requests.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">cors</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;cors&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">corsOptions</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">origin</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">ALLOWED_ORIGINS</span>.<span style="color:#a6e22e">split</span>(<span style="color:#e6db74">&#39;,&#39;</span>),
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;GET&#39;</span>, <span style="color:#e6db74">&#39;POST&#39;</span>, <span style="color:#e6db74">&#39;PUT&#39;</span>, <span style="color:#e6db74">&#39;DELETE&#39;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">allowedHeaders</span><span style="color:#f92672">:</span> [<span style="color:#e6db74">&#39;Content-Type&#39;</span>, <span style="color:#e6db74">&#39;Authorization&#39;</span>],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">credentials</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">maxAge</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">86400</span> <span style="color:#75715e">// 24 hours
+</span></span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">cors</span>(<span style="color:#a6e22e">corsOptions</span>));
+</span></span></code></pre></div><h2 id="api-security-checklist">API Security Checklist</h2>
+<ul>
+<li>✅ Use HTTPS everywhere</li>
+<li>✅ Implement authentication (OAuth 2.0, API keys)</li>
+<li>✅ Add authorization checks for every endpoint</li>
+<li>✅ Validate and sanitize all inputs</li>
+<li>✅ Implement rate limiting</li>
+<li>✅ Use API versioning</li>
+<li>✅ Enable CORS with whitelist</li>
+<li>✅ Log security events</li>
+<li>✅ Implement request/response encryption</li>
+<li>✅ Use security headers (CSP, HSTS, X-Frame-Options)</li>
+<li>✅ Conduct regular security audits</li>
+<li>✅ Keep dependencies updated</li>
+</ul>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://owasp.org/www-project-api-security/">OWASP API Security Top 10</a></li>
+<li><a href="https://jwt.io/">JWT.io</a> - JWT debugger</li>
+<li><a href="https://www.postman.com/security/">Postman Security</a></li>
+</ul>
+<p>Remember: Security is not a feature, it&rsquo;s a requirement! 🛡️</p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/cybersecurity">cybersecurity</a></li>
+              
+              <li><a href="/tags/api">API</a></li>
+              
+              <li><a href="/tags/rest">REST</a></li>
+              
+              <li><a href="/tags/security">security</a></li>
+              
+              <li><a href="/tags/oauth">oauth</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+      <div class="toc">
+        <strong>Table of contents:</strong>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#authentication--authorization">Authentication &amp; Authorization</a>
+      <ul>
+        <li><a href="#oauth-20-and-jwt">OAuth 2.0 and JWT</a></li>
+      </ul>
+    </li>
+    <li><a href="#rate-limiting">Rate Limiting</a></li>
+    <li><a href="#input-validation">Input Validation</a></li>
+    <li><a href="#cors-configuration">CORS Configuration</a></li>
+    <li><a href="#api-security-checklist">API Security Checklist</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/ethanolivertroy" rel="me" title="GitHub"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+    </svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2025  © Ethan Oliver Troy |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>

@@ -34,20 +34,20 @@ description: Here is a demo of all shortcodes available in Hugo.
 
 ### Original
 
-{{< callout emoji="⚡️" text="Original callout." >}}
+{{< callout emoji="⚡️" text="Original callout." />}}
 
 ### Alert
 
-{{< callout type="alert" text="This is an alert callout." >}}
+{{< callout type="alert" text="This is an alert callout." />}}
 
 ### Custom
 
-{{< callout type="custom" emoji="⚡️" title="Custom callout" text="This is custom text for a custom callout." style="background-color: transparent; border: 3px solid #d340e0;" >}}
+{{< callout type="custom" emoji="⚡️" title="Custom callout" text="This is custom text for a custom callout." style="background-color: transparent; border: 3px solid #d340e0;" />}}
 
 ### Tip
 
-{{< callout type="tip" text="This is a tip callout." >}}
+{{< callout type="tip" text="This is a tip callout." />}}
 
 ### Warning
 
-{{< callout type="warning" text="This is a warning callout." >}}
+{{< callout type="warning" text="This is a warning callout." />}}

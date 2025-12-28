@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Introduction to Threat Modeling for Web Applications - Archie Catppuccin Demo</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Understanding threat modeling fundamentals and STRIDE methodology" />
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content="http://localhost:1313/posts/cybersec-1-threat-modeling/">
+  <meta property="og:site_name" content="Archie Catppuccin Demo">
+  <meta property="og:title" content="Introduction to Threat Modeling for Web Applications">
+  <meta property="og:description" content="Understanding threat modeling fundamentals and STRIDE methodology">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-12-15T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-12-15T00:00:00+00:00">
+    <meta property="article:tag" content="Cybersecurity">
+    <meta property="article:tag" content="Threat-Modeling">
+    <meta property="article:tag" content="Web-Security">
+    <meta property="article:tag" content="STRIDE">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Introduction to Threat Modeling for Web Applications">
+  <meta name="twitter:description" content="Understanding threat modeling fundamentals and STRIDE methodology">
+
+        <link href="http://localhost:1313/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:1313/css/main.654c7695f4b9fa25aa6dc6f2f6425526c6f24cdd1492c2d0eb763d229d97e383.css" />
+
+	<link id="flavor-latte" rel="stylesheet" type="text/css" href="http://localhost:1313/css/latte.d77227573f872ed07da0154ff547fbfb9ab0a77368c1dd8d54e90e059fac2c1c.css" disabled />
+	<link id="flavor-frappe" rel="stylesheet" type="text/css" href="http://localhost:1313/css/frappe.8afb622563a8caed70b03ba53562c3dde534a5fca7c772cb959dd48875af147d.css" disabled />
+	<link id="flavor-macchiato" rel="stylesheet" type="text/css" href="http://localhost:1313/css/macchiato.25f46184fcebe0009a303aafefa91d967f13bb95e5e8445e13c41c082934a386.css" disabled />
+	<link id="flavor-mocha" rel="stylesheet" type="text/css" href="http://localhost:1313/css/mocha.c846e1bc657decab6442dadd37a0c96ff85eb1249980b951d41f6d4a9ef513cd.css" disabled />
+
+	
+	<script>
+		window.CATPPUCCIN_DEFAULT_FLAVOR = "mocha";
+	</script>
+
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="http://localhost:1313/">Archie Catppuccin Demo</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		<div class="flavor-selector-wrapper">
+			<label for="flavor-selector" class="visually-hidden">Choose Catppuccin flavor</label>
+			<select id="flavor-selector" class="flavor-selector" onchange="handleFlavorChange(event)" aria-label="Select Catppuccin theme flavor">
+				<option value="latte">☕ Latte</option>
+				<option value="frappe">🥤 Frappé</option>
+				<option value="macchiato">🧋 Macchiato</option>
+				<option value="mocha">🍵 Mocha</option>
+			</select>
+		</div>
+		<script src="http://localhost:1313/js/catppuccin-flavor.js"></script>
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">Introduction to Threat Modeling for Web Applications</h1>
+          <div class="meta">Posted on Dec 15, 2025</div>
+        </div>
+        
+        <section class="body">
+          <p>Threat modeling is a structured approach to identifying security threats before they become vulnerabilities. In this post, we&rsquo;ll explore the STRIDE methodology and how to apply it to modern web applications.</p>
+<h2 id="what-is-stride">What is STRIDE?</h2>
+<p>STRIDE is an acronym representing six threat categories:</p>
+<ul>
+<li><strong>S</strong>poofing - Impersonating someone or something else</li>
+<li><strong>T</strong>ampering - Modifying data or code</li>
+<li><strong>R</strong>epudiation - Denying actions or transactions</li>
+<li><strong>I</strong>nformation Disclosure - Exposing protected information</li>
+<li><strong>D</strong>enial of Service - Degrading or denying service</li>
+<li><strong>E</strong>levation of Privilege - Gaining unauthorized access</li>
+</ul>
+<h2 id="applying-stride-to-web-apps">Applying STRIDE to Web Apps</h2>
+<h3 id="1-spoofing-threats">1. Spoofing Threats</h3>
+<p>Authentication is your first line of defense. Consider:</p>
+<div class='callout callout-warning'>
+  <div class="callout-inner">
+    ⚠️ Never store passwords in plain text. Use bcrypt, Argon2, or scrypt for password hashing.
+  </div>
+</div>
+
+<p><strong>Example threat</strong>: An attacker intercepts session tokens and impersonates a legitimate user.</p>
+<p><strong>Mitigation</strong>:</p>
+<ul>
+<li>Implement secure session management</li>
+<li>Use HTTPS for all traffic</li>
+<li>Add multi-factor authentication (MFA)</li>
+<li>Implement session timeout and rotation</li>
+</ul>
+<h3 id="2-tampering-threats">2. Tampering Threats</h3>
+<p>Data integrity is crucial for security and trust.</p>
+<p><strong>Example threat</strong>: Man-in-the-middle (MITM) attacks modifying API requests.</p>
+<p><strong>Mitigation</strong>:</p>
+<ul>
+<li>Use TLS/SSL certificates</li>
+<li>Implement request signing</li>
+<li>Use HMAC for data integrity verification</li>
+<li>Enable Content Security Policy (CSP)</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#75715e">// Example: Simple HMAC verification
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">crypto</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;crypto&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">verifyHMAC</span>(<span style="color:#a6e22e">data</span>, <span style="color:#a6e22e">signature</span>, <span style="color:#a6e22e">secret</span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">hmac</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">createHmac</span>(<span style="color:#e6db74">&#39;sha256&#39;</span>, <span style="color:#a6e22e">secret</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">hmac</span>.<span style="color:#a6e22e">update</span>(<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">calculatedSignature</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">hmac</span>.<span style="color:#a6e22e">digest</span>(<span style="color:#e6db74">&#39;hex&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">crypto</span>.<span style="color:#a6e22e">timingSafeEqual</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">signature</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">Buffer</span>.<span style="color:#a6e22e">from</span>(<span style="color:#a6e22e">calculatedSignature</span>)
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="3-information-disclosure">3. Information Disclosure</h3>
+<p>Protecting sensitive data from unauthorized access.</p>
+<div class='callout callout-tip'>
+  <div class="callout-inner">
+    🔎 Tip: Use environment variables for secrets, never commit them to version control!
+  </div>
+</div>
+
+<p><strong>Common vulnerabilities</strong>:</p>
+<ul>
+<li>Exposed API keys in frontend code</li>
+<li>Detailed error messages revealing system info</li>
+<li>Unencrypted sensitive data in logs</li>
+<li>Directory listing enabled</li>
+</ul>
+<p><strong>Best practices</strong>:</p>
+<ul>
+<li>Encrypt sensitive data at rest and in transit</li>
+<li>Implement proper access controls</li>
+<li>Sanitize error messages</li>
+<li>Use <code>.gitignore</code> for sensitive files</li>
+</ul>
+<h2 id="threat-modeling-process">Threat Modeling Process</h2>
+<ol>
+<li><strong>Identify Assets</strong> - What needs protection?</li>
+<li><strong>Create Architecture Diagrams</strong> - Visualize data flows</li>
+<li><strong>Identify Threats</strong> - Apply STRIDE to each component</li>
+<li><strong>Document Threats</strong> - Create a threat matrix</li>
+<li><strong>Prioritize Risks</strong> - Use DREAD or CVSS scoring</li>
+<li><strong>Mitigate</strong> - Implement security controls</li>
+</ol>
+<h2 id="tools-for-threat-modeling">Tools for Threat Modeling</h2>
+<ul>
+<li><strong>OWASP Threat Dragon</strong> - Open-source threat modeling tool</li>
+<li><strong>Microsoft Threat Modeling Tool</strong> - Free Windows application</li>
+<li><strong>IriusRisk</strong> - Commercial threat modeling platform</li>
+<li><strong>Miro/Lucidchart</strong> - For creating data flow diagrams</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>Threat modeling isn&rsquo;t a one-time activity - it&rsquo;s an ongoing process that should be integrated into your development lifecycle. Start early, iterate often, and always think like an attacker.</p>
+<p><strong>Next Steps</strong>:</p>
+<ul>
+<li>Map out your application&rsquo;s architecture</li>
+<li>Identify trust boundaries</li>
+<li>Apply STRIDE to each component</li>
+<li>Document and prioritize threats</li>
+<li>Implement mitigations</li>
+</ul>
+<p><em>Stay secure! 🔒</em></p>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          <nav class="nav tags">
+            <ul class="tags">
+              
+              <li><a href="/tags/cybersecurity">cybersecurity</a></li>
+              
+              <li><a href="/tags/threat-modeling">threat-modeling</a></li>
+              
+              <li><a href="/tags/web-security">web-security</a></li>
+              
+              <li><a href="/tags/stride">STRIDE</a></li>
+              
+            </ul>
+          </nav>
+          
+          
+        </div>
+      </div>
+
+      
+      
+      <div class="toc">
+        <strong>Table of contents:</strong>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#what-is-stride">What is STRIDE?</a></li>
+    <li><a href="#applying-stride-to-web-apps">Applying STRIDE to Web Apps</a>
+      <ul>
+        <li><a href="#1-spoofing-threats">1. Spoofing Threats</a></li>
+        <li><a href="#2-tampering-threats">2. Tampering Threats</a></li>
+        <li><a href="#3-information-disclosure">3. Information Disclosure</a></li>
+      </ul>
+    </li>
+    <li><a href="#threat-modeling-process">Threat Modeling Process</a></li>
+    <li><a href="#tools-for-threat-modeling">Tools for Threat Modeling</a></li>
+    <li><a href="#conclusion">Conclusion</a></li>
+  </ul>
+</nav>
+      </div>
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/ethanolivertroy" rel="me" title="GitHub"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+    </svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2025  © Ethan Oliver Troy |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+</div>
+    </body>
+</html>

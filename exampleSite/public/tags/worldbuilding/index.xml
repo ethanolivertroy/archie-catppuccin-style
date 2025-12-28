@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Worldbuilding on Archie Catppuccin Demo</title>
+    <link>http://localhost:1313/tags/worldbuilding/</link>
+    <description>Recent content in Worldbuilding on Archie Catppuccin Demo</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© Ethan Oliver Troy</copyright>
+    <lastBuildDate>Wed, 03 Dec 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/worldbuilding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Magic System of Harry Potter: A Technical Analysis</title>
+      <link>http://localhost:1313/posts/hp-1-magic-systems/</link>
+      <pubDate>Wed, 03 Dec 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hp-1-magic-systems/</guid>
+      <description>&lt;p&gt;What makes Harry Potter&amp;rsquo;s magic system work? Let&amp;rsquo;s analyze the rules and constraints that make the wizarding world feel believable.&lt;/p&gt;&#xA;&lt;h2 id=&#34;hard-vs-soft-magic&#34;&gt;Hard vs. Soft Magic&lt;/h2&gt;&#xA;&lt;p&gt;Brandon Sanderson categorizes magic systems as &amp;ldquo;hard&amp;rdquo; (strict rules) or &amp;ldquo;soft&amp;rdquo; (mysterious). Harry Potter sits somewhere in between.&lt;/p&gt;&#xA;&#xA;&#xA;&lt;div class=&#39;callout&#39;&gt;&#xA;  &lt;div class=&#34;callout-inner&#34;&gt;&#xA;    &lt;strong&gt;Sanderson&amp;rsquo;s First Law&lt;/strong&gt;: &amp;ldquo;An author&amp;rsquo;s ability to solve conflict with magic is DIRECTLY PROPORTIONAL to how well the reader understands said magic.&amp;rdquo;&#xA;  &lt;/div&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&#xA;&lt;h3 id=&#34;hard-magic-elements&#34;&gt;Hard Magic Elements&lt;/h3&gt;&#xA;&lt;p&gt;&lt;strong&gt;Explicit Rules&lt;/strong&gt;:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Wands are required for most spells&lt;/li&gt;&#xA;&lt;li&gt;Incantations must be spoken correctly&lt;/li&gt;&#xA;&lt;li&gt;Intent matters (Patronus requires positive emotion)&lt;/li&gt;&#xA;&lt;li&gt;Unforgivable Curses require genuine intent&lt;/li&gt;&#xA;&lt;li&gt;Potions follow specific recipes&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;&lt;strong&gt;Limitations&lt;/strong&gt;:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

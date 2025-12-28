@@ -45,10 +45,21 @@
 	{{ $style := resources.Get "css/main.css" | fingerprint }}
 	<link rel="stylesheet" type="text/css" media="screen" href="{{ $style.Permalink }}" />
 
-	{{- if or (eq .Site.Params.mode "auto") (eq .Site.Params.mode "dark") (eq .Site.Params.mode "toggle") -}}
-		{{ $darkstyle := resources.Get "css/dark.css" | fingerprint }}
-		<link id="darkModeStyle" rel="stylesheet" type="text/css" href="{{ $darkstyle.Permalink }}" {{ if eq .Site.Params.mode "auto" }}media="(prefers-color-scheme: dark)"{{ end }} {{ if eq .Site.Params.mode "toggle" }}disabled{{ end }} />
-	{{- end -}}
+	<!-- Catppuccin flavor stylesheets -->
+	{{- $latte := resources.Get "css/latte.css" | fingerprint -}}
+	{{- $frappe := resources.Get "css/frappe.css" | fingerprint -}}
+	{{- $macchiato := resources.Get "css/macchiato.css" | fingerprint -}}
+	{{- $mocha := resources.Get "css/mocha.css" | fingerprint -}}
+
+	<link id="flavor-latte" rel="stylesheet" type="text/css" href="{{ $latte.Permalink }}" disabled />
+	<link id="flavor-frappe" rel="stylesheet" type="text/css" href="{{ $frappe.Permalink }}" disabled />
+	<link id="flavor-macchiato" rel="stylesheet" type="text/css" href="{{ $macchiato.Permalink }}" disabled />
+	<link id="flavor-mocha" rel="stylesheet" type="text/css" href="{{ $mocha.Permalink }}" disabled />
+
+	<!-- Inject default flavor from config -->
+	<script>
+		window.CATPPUCCIN_DEFAULT_FLAVOR = "{{ .Site.Params.catppuccinFlavor | default "mocha" }}";
+	</script>
 
 	<!-- Mathjax support -->
 	{{- if .Site.Params.mathjax | default false -}}

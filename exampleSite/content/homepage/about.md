@@ -1,7 +1,7 @@
 ---
-title: 'Our Difference'
-button: 'About us'
+title: 'Theme Features'
+button: 'Documentation'
 weight: 2
 ---
 
-Lorem ipsum dolor sit amet, et essent mediocritatem quo, choro volumus oporteat an mei. ipsum dolor sit amet, et essent mediocritatem quo,
+Built on the minimal Archie theme with Catppuccin colors, featuring responsive design, syntax highlighting, callouts, math support, and a flavor selector with localStorage persistence.

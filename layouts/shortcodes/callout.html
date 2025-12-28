@@ -1,4 +1,11 @@
 {{ $type := .Get "type" }}
+{{ if .Inner }}
+<div class='callout'>
+  <div class="callout-inner">
+    {{ .Inner | markdownify }}
+  </div>
+</div>
+{{ else }}
 <div class='callout callout-{{ $type }}' style='{{ if eq $type "custom" }}{{ .Get "style" | safeCSS }}{{ end }}'>
   <div class="callout-inner">
     {{ if eq $type "alert" }}
@@ -20,5 +27,6 @@
     {{ else}}
     💡 {{ .Get "text" }}
     {{ end }}
-    </div>
+  </div>
 </div>
+{{ end }}
